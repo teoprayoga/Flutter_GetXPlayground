@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
   @override
   void onInit() {
     super.onInit();
@@ -15,4 +13,10 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
+
+  //bottom navigation
+  var index = 0.obs;
+
+  //Listview
+  
 }

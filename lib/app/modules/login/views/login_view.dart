@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
+
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,24 +13,9 @@ class LoginView extends GetView<LoginController> {
         centerTitle: true,
       ),
       body: Center(
-        child: Container(
-          padding: EdgeInsets.all(10),
-          child: Column(
-            children: [
-              TextField(
-                controller: controller.tecEmail,
-              ),
-              TextField(
-                controller: controller.tecPassword,
-              ),
-              MaterialButton(
-                child: Text('Submit'),
-                onPressed: () {
-                  controller.onLogin();
-                },
-              )
-            ],
-          ),
+        child: Text(
+          'LoginView is working',
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );

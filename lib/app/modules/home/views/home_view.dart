@@ -11,9 +11,22 @@ class HomeView extends GetView<HomeController> {
         title: Text('HomeView'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text('home'),
+      body: ListView.builder(
+        itemCount: 0,
+        itemBuilder: (context, index) => ListTile(),
       ),
+      bottomNavigationBar: Obx(() => BottomNavigationBar(
+        currentIndex: controller.index.value,
+        onTap: (value) {
+          controller.index.value = value;
+          controller.update();
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        ],
+      )),
     );
   }
 }
